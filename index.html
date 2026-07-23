@@ -68,7 +68,7 @@
                 <div id="ai-case" class="project-card glass-panel">
                     <div class="project-info">
                         <div class="project-header">
-                            <h3 class="project-title">수천 명 사용자 대상 LLM 기반 음성 평가 서비스 아키텍처 설계 및 운영 안정화</h3>
+                            <h3 class="project-title">LLM 기반 음성 평가 플랫폼 아키텍처 설계 및 AI 비용 최적화</h3>
                             <div class="tech-stack">
                                 <span class="tag">AI Architecture</span>
                                 <span class="tag">Async Processing</span>
@@ -99,7 +99,7 @@
                             <h4>Architecture Decision</h4>
                             <ul>
                                 <li>AI API 결과와 평가 Rule Engine 분리</li>
-                                <li>LLM 분석 결과(JSON)를 저장하고 평가 Rule Engine과 분리하여 재채점 시 LLM 재호출 없이 결과 재활용 가능한 구조 설계</li>
+                                <li>LLM 분석 결과(JSON)를 저장하고 평가 Rule Engine과 분리하여 재채점 시 LLM 재호출 없이 기존 결과를 활용하는 구조 설계</li>
                                 <li>비용 증가 없이 사용자 증가를 고려한 Async Processing 구조 적용</li>
                                 <li>운영자가 평가 정책을 변경할 수 있는 Admin 기반 운영 구조 설계</li>
                             </ul>
@@ -112,7 +112,7 @@
                                 <li><strong>비동기 파이프라인:</strong> asyncio 기반 동시성 제어 구조를 적용하여 외부 AI API 호출 병목 완화</li>
                                 <li><strong>재채점 구조 설계:</strong> 점수 계산 로직을 독립적으로 분리하여 AI API 재호출 없이 기존 데이터만으로 빠른 재채점이
                                     가능하도록 구조 개편</li>
-                                <li><strong>주요 성과:</strong> 구조 개편을 통해 <strong>재채점 과정에서 LLM API 재호출 0회</strong> 달성. 비동기 처리
+                                <li><strong>주요 성과:</strong> 구조 개편을 통해 <strong>재채점 과정에서 AI API 재호출 0회</strong> 달성. 비동기 처리
                                     파이프라인으로 <strong>응답 처리 시간 단축</strong> 및 <strong>운영 개입 최소화</strong> 등 서비스 안정성과 비용 절감을
                                     성공적으로 확보</li>
                             </ul>
@@ -147,7 +147,7 @@
 
                     <div class="project-header">
                         <h3 class="project-title">
-                            커머스 플랫폼 도메인 분리 및 대용량 조회 성능 개선 아키텍처 사례
+                            대규모 커머스 플랫폼 상품 도메인 서비스 개선 및 조회 최적화 사례
                         </h3>
 
                         <div class="tech-stack">
@@ -187,14 +187,14 @@
                             FP[Front Product API]
                             FE[Front Event API]
                             FO[Front Order API]
-                            FS[Front Settlement API]
+                            FS[Front Other API]
                             end
 
                             subgraph Back API Layer
                             BP[Back Product API]
                             BE[Back Event API]
                             BO[Back Order API]
-                            BS[Back Settlement API]
+                            BS[Back Other API]
                             end
 
                             APP --> FP
@@ -252,9 +252,9 @@
                             FO --> OR
                             end
 
-                            subgraph Settlement Domain
-                            SM[(Settlement Master)]
-                            SR[(Settlement Replica)]
+                            subgraph Other Commerce Domain
+                            SM[(Other Master)]
+                            SR[(Other Replica)]
 
                             BS --> SM
                             SM --> SR
