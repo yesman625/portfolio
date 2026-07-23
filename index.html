@@ -32,7 +32,7 @@
             <div class="container hero-content">
                 <p class="greeting">Hello, I'm an Engineering Leader 👋</p>
                 <h2 class="hero-title">20년 이상 IT 시스템 개발 경험과<br>16년 이상의 커머스 플랫폼 설계·운영 경험을 가진<br><span class="highlight">Engineering Leader & Backend Architect</span>입니다.</h2>
-                <p class="hero-desc">대규모 커머스 서비스의 성장 과정에서 도메인 분리, API 설계, 데이터 구조 개선, 개발 조직 운영을 통해 안정적인 서비스 확장을 만들어 왔습니다. 최근에는 수천 명 규모 사용자가 이용하는 AI 기반 교육 서비스를 설계·개발하며, LLM 활용 서비스의 아키텍처 설계와 운영 안정화 경험을 확장하고 있습니다.</p>
+                <p class="hero-desc">대규모 커머스 서비스의 성장 과정에서 도메인 분리, API 설계, 데이터 구조 개선, 개발 조직 운영을 통해 안정적인 서비스 확장을 만들어 왔습니다. 최근에는 실제 서비스 운영 환경에서 AI 기반 교육 서비스를 설계·개발하며, LLM 활용 서비스의 아키텍처 설계, 비용 최적화, 운영 안정화 경험을 확장하고 있습니다.</p>
                 <div class="focus-areas" style="margin: 2rem 0; font-size: 1.1rem; color: #f8f9fa;">
                     <div style="font-weight: 600; margin-bottom: 1rem; color: #4facfe; text-transform: uppercase; letter-spacing: 1px;">Focus Areas</div>
                     <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
@@ -68,7 +68,7 @@
                 <div id="ai-case" class="project-card glass-panel">
                     <div class="project-info">
                         <div class="project-header">
-                            <h3 class="project-title">LLM 기반 음성 평가 플랫폼 아키텍처 설계 및 AI 비용 최적화</h3>
+                            <h3 class="project-title">LLM 기반 AI 평가 서비스 아키텍처 설계 및 운영 안정화 사례</h3>
                             <div class="tech-stack">
                                 <span class="tag">AI Architecture</span>
                                 <span class="tag">Async Processing</span>
@@ -78,8 +78,8 @@
                         </div>
 
                         <p class="project-description">
-                            수천 명 사용자가 이용하는 AI 기반 영어 평가 서비스의 백엔드 및 AI 처리 아키텍처를 설계하고 구축한 사례입니다.<br><br>
-                            음성 인식, LLM 평가, 점수 산출, 운영 관리 영역을 분리하여 서비스 확장성과 운영 효율성을 고려한 구조를 구현했습니다.
+                            실제 운영 중인 AI 기반 영어 평가 서비스의 백엔드 및 AI 처리 아키텍처를 설계하고 구축한 사례입니다.<br><br>
+                            음성 인식, LLM 평가, 점수 산출, 운영 관리 영역을 분리하여 평가 정책 변경과 운영 요구사항에 유연하게 대응 가능한 구조를 구현했습니다.
                         </p>
                         <p class="impact"
                             style="background-color: rgba(79, 172, 254, 0.15); padding: 12px 18px; border-left: 4px solid #4facfe; margin: 15px 0; font-weight: 500; border-radius: 4px; line-height: 1.5; color: #f8f9fa;">
@@ -89,9 +89,9 @@
                         <div class="features-list" style="margin-bottom: 2rem;">
                             <h4>Project Overview & Role</h4>
                             <ul>
-                                <li><strong>역할:</strong> AI 평가 서비스의 핵심 아키텍처 설계와 백엔드 개발, 운영 안정화 영역 주도</li>
-                                <li><strong>서비스 운영 규모:</strong> 수천 명 사용자 대상 서비스 운영</li>
-                                <li><strong>주요 고려사항:</strong> AI API 비용 관리, 동시 요청 처리, 평가 정책 변경 대응, 운영 자동화</li>
+                                <li><strong>역할:</strong> AI 평가 서비스 아키텍처 설계, 백엔드 플랫폼 개발, 운영 안정화 영역 주도</li>
+                                <li><strong>서비스 특성:</strong> 음성 데이터 기반 AI 평가 및 개인화 피드백 제공 서비스</li>
+                                <li><strong>주요 고려사항:</strong> LLM API 비용 관리, 평가 결과 재활용, 평가 정책 변경 대응, 운영 자동화</li>
                             </ul>
                         </div>
 
@@ -100,7 +100,7 @@
                             <ul>
                                 <li>AI API 결과와 평가 Rule Engine 분리</li>
                                 <li>LLM 분석 결과(JSON)를 저장하고 평가 Rule Engine과 분리하여 재채점 시 LLM 재호출 없이 기존 결과를 활용하는 구조 설계</li>
-                                <li>비용 증가 없이 사용자 증가를 고려한 Async Processing 구조 적용</li>
+                                <li>AI API 처리 특성을 고려한 Async Processing 구조 적용</li>
                                 <li>운영자가 평가 정책을 변경할 수 있는 Admin 기반 운영 구조 설계</li>
                             </ul>
                         </div>
@@ -108,7 +108,7 @@
                         <div class="features-list">
                             <h4>문제 정의 및 해결 전략 (Troubleshooting)</h4>
                             <ul>
-                                <li><strong>해결 과제:</strong> OpenAI API 호출 비용 문제, 동시 요청 증가에 따른 응답 지연 및 빈번한 재채점 요구</li>
+                                <li><strong>해결 과제:</strong> OpenAI API 호출 비용 관리, AI 평가 결과 재활용 필요성, 평가 정책 변경에 따른 반복 처리 문제</li>
                                 <li><strong>비동기 파이프라인:</strong> asyncio 기반 동시성 제어 구조를 적용하여 외부 AI API 호출 병목 완화</li>
                                 <li><strong>재채점 구조 설계:</strong> 점수 계산 로직을 독립적으로 분리하여 AI API 재호출 없이 기존 데이터만으로 빠른 재채점이
                                     가능하도록 구조 개편</li>
