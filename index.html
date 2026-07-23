@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 | Engineering Leader & Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="glass-header">
+        <div class="container header-container">
+            <h1 class="logo">Dev.Portfolio</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero section">
+            <div class="container hero-content">
+                <p class="greeting">Hello, I'm an Engineering Leader 👋</p>
+                <h2 class="hero-title">20년 커머스 전문성과<br>대규모 플랫폼 경험을 갖춘<br><span class="highlight">Backend
+                        Architect</span>입니다.</h2>
+                <p class="hero-desc">MSA 전환, 대규모 플랫폼 설계, 조직 리딩을 통해 비즈니스 문제를 해결합니다. 최근에는 실무적인 AI 서비스 아키텍처 설계와 시스템 최적화에
+                    주력하고 있습니다.</p>
+                <ul class="career-list"
+                    style="list-style: none; padding: 0; margin: 1.5rem 0 2.5rem; font-size: 1.05rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; color: #ddd;">
+                    <li><i class="fas fa-check-circle" style="color: #4facfe; margin-right: 5px;"></i> 20+ Years
+                        Experience</li>
+                    <li><i class="fas fa-check-circle" style="color: #4facfe; margin-right: 5px;"></i> G마켓 · 티몬 · 위메프 ·
+                        홈플러스 · CJ ENM</li>
+                    <li><i class="fas fa-check-circle" style="color: #4facfe; margin-right: 5px;"></i> Commerce Platform
+                        Architecture</li>
+                    <li><i class="fas fa-check-circle" style="color: #4facfe; margin-right: 5px;"></i> Engineering Team
+                        Leadership</li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="#ai-case" class="btn btn-primary">
+                        AI 아키텍처 사례 보기
+                    </a>
+
+                    <a href="#commerce-case" class="btn btn-secondary">
+                        커머스 플랫폼 사례 보기
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <div class="container">
+                <h2 class="section-title">Architecture Case Studies</h2>
+
+                <div id="ai-case" class="project-card glass-panel">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">AI 기반 OPIc 평가 시스템 아키텍처 설계</h3>
+                            <div class="tech-stack">
+                                <span class="tag">AI Architecture</span>
+                                <span class="tag">Async Processing</span>
+                                <span class="tag">Score Engine</span>
+                                <span class="tag">Cost Optimization</span>
+                            </div>
+                        </div>
+
+                        <p class="project-description">
+                            사용자 음성 응답을 자동 평가하고 개인화된 피드백을 생성하기 위해 도입한 AI 평가 시스템의 전체 아키텍처를 설계하고 구축한 사례입니다.
+                        </p>
+                        <p class="impact"
+                            style="background-color: rgba(79, 172, 254, 0.15); padding: 12px 18px; border-left: 4px solid #4facfe; margin: 15px 0; font-weight: 500; border-radius: 4px; line-height: 1.5; color: #f8f9fa;">
+                            ✔ AI 평가 결과(JSON)와 채점 로직을 분리하여 채점 정책 변경 시 재분석 없이 즉시 재채점 가능한 구조 설계
+                        </p>
+
+                        <div class="features-list">
+                            <h4>문제 정의 및 해결 전략 (Troubleshooting)</h4>
+                            <ul>
+                                <li><strong>해결 과제:</strong> OpenAI API 호출 비용 문제, 동시 요청 증가에 따른 응답 지연 및 빈번한 재채점 요구</li>
+                                <li><strong>비동기 파이프라인:</strong> asyncio 기반 동시성 제어 구조를 적용하여 외부 AI API 호출 병목 완화</li>
+                                <li><strong>재채점 구조 설계:</strong> 점수 계산 로직을 독립적으로 분리하여 AI API 재호출 없이 기존 데이터만으로 빠른 재채점이
+                                    가능하도록 구조 개편</li>
+                                <li><strong>주요 성과:</strong> 구조 개편을 통해 재채점 시 <strong>AI API 호출 0회</strong> 달성. 비동기 처리
+                                    파이프라인으로 <strong>응답 처리 시간 단축</strong> 및 <strong>운영 개입 최소화</strong> 등 서비스 안정성과 비용 절감을
+                                    성공적으로 확보</li>
+                            </ul>
+                        </div>
+
+                        <div class="architecture-box">
+                            <h4>시스템 흐름도 (Architecture Diagram)</h4>
+                            <div class="mermaid"
+                                style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; display: flex; justify-content: center; overflow-x: auto;">
+                                graph LR
+                                A[User Audio] --> B[FastAPI]
+                                B --> C[Whisper STT]
+                                C --> D[GPT-4o Evaluation]
+                                D --> E[Evaluation JSON]
+                                E --> F[(PostgreSQL)]
+                                F --> G[Score Engine]
+                                G --> H[Final Grade]
+                                I[Admin Dashboard] --> J[Scoring Policy]
+                                J --> G
+                                F --> I
+
+                                style E fill:#1f4b99,stroke-width:0px,color:#fff
+                                style G fill:#0d6b4d,stroke-width:0px,color:#fff
+                                style J fill:#7a4b00,stroke-width:0px,color:#fff
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="commerce-case" class="project-card glass-panel mt-4">
+
+                    <div class="project-header">
+                        <h3 class="project-title">
+                            대규모 커머스 플랫폼 고가용성 MSA 및 조회 최적화 아키텍처
+                        </h3>
+
+                        <div class="tech-stack">
+                            <span class="tag">MSA</span>
+                            <span class="tag">Read/Write Split</span>
+                            <span class="tag">DB Replication</span>
+                            <span class="tag">Caching Strategy</span>
+                            <span class="tag">Front/Back API Separation</span>
+                        </div>
+                    </div>
+
+                    <p class="project-description">
+                        대형 커머스 플랫폼 재직 시, 대용량 트래픽 환경에서 운영 안정성을 확보하기 위해
+                        상품·행사·주문·정산 도메인을 독립 서비스로 분리하고,
+                        <strong>Front/Back API 계층 분리 및 다중 캐시/Replica DB 구조</strong>를 적용하여 대규모 조회 부하를 효율적으로 제어한 아키텍처
+                        사례입니다.
+                    </p>
+
+                    <p class="impact"
+                        style="background-color: rgba(236,72,153,.15); padding:12px 18px; border-left:4px solid #ec4899; margin:15px 0; border-radius:4px; font-weight: 500; color: #f8f9fa;">
+                        ✔ 고객 조회 트래픽을 Replica DB + Cache 계층으로 격리하여, 운영계(Master) DB 부하 및 장애 전파 위험 최소화
+                    </p>
+
+                    <div class="architecture-box">
+
+                        <h4>MSA Domain Architecture</h4>
+
+                        <div class="mermaid">
+                            graph TB
+
+                            subgraph Channel Layer
+                            APP[Customer App / Web]
+                            ADMIN[Admin Web]
+                            PARTNER[Partner Web]
+                            OPEN[Open API]
+                            end
+
+                            subgraph Front API Layer
+                            FP[Front Product API]
+                            FE[Front Event API]
+                            FO[Front Order API]
+                            FS[Front Settlement API]
+                            end
+
+                            subgraph Back API Layer
+                            BP[Back Product API]
+                            BE[Back Event API]
+                            BO[Back Order API]
+                            BS[Back Settlement API]
+                            end
+
+                            APP --> FP
+                            APP --> FE
+                            APP --> FO
+                            APP --> FS
+
+                            ADMIN --> BP
+                            PARTNER --> BP
+                            OPEN --> BP
+
+                            ADMIN --> BE
+                            PARTNER --> BE
+                            OPEN --> BE
+
+                            ADMIN --> BO
+                            PARTNER --> BO
+                            OPEN --> BO
+
+                            ADMIN --> BS
+                            PARTNER --> BS
+                            OPEN --> BS
+
+                            subgraph Product Domain
+                            PM[(Product Master)]
+                            PR[(Product Replica)]
+                            RC[(Redis)]
+
+                            BP --> PM
+                            PM --> PR
+
+                            FP --> RC
+                            RC --> PR
+                            end
+
+                            subgraph Event Domain
+                            EM[(Event Master)]
+                            ER[(Event Replica)]
+                            CB[(Couchbase)]
+
+                            BE --> EM
+                            EM --> ER
+
+                            FE --> CB
+                            CB --> ER
+                            end
+
+                            subgraph Order Domain
+                            OM[(Order Master)]
+                            OR[(Order Replica)]
+
+                            BO --> OM
+                            OM --> OR
+
+                            FO --> OR
+                            end
+
+                            subgraph Settlement Domain
+                            SM[(Settlement Master)]
+                            SR[(Settlement Replica)]
+
+                            BS --> SM
+                            SM --> SR
+
+                            FS --> SR
+                            end
+                        </div>
+
+                    </div>
+
+                    <div class="features-list">
+
+                        <h4>Key Architectural Decisions</h4>
+                        <ul>
+                            <li>
+                                <strong>독립적 도메인 서비스 분리:</strong>
+                                상품·행사·주문·정산 도메인 분리를 통해 서비스 간 영향도 단절
+                            </li>
+                            <li>
+                                <strong>Front API / Back API 계층 분리:</strong>
+                                고객용 대용량 조회 트래픽과 관리자/파트너용 CUD 처리 트래픽을 독립적으로 스케일아웃
+                            </li>
+                            <li>
+                                <strong>Master / Replica DB 기반 Read/Write 분리:</strong>
+                                읽기 전용 DB 리플리카 구성을 통한 데이터베이스 읽기 부하 분산
+                            </li>
+                            <li>
+                                <strong>도메인 데이터 특성에 맞춘 캐시 엔진 이원화 (Redis / Couchbase):</strong>
+                                상품(Key-Value)과 행사(Document) 도메인의 데이터 구조적 차이에 맞춰 캐시 솔루션을 분리 배치, DB I/O 병목을 근본적으로 차단하고 API
+                                응답 속도 최적화
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container glass-panel text-center">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p>새로운 도전을 기다리고 있습니다. 언제든 편하게 연락 주세요!</p>
+                <a href="mailto:yesman625@daum.net" class="btn btn-primary mt-4"><i class="fas fa-envelope"></i> 이메일
+                    보내기</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+
+</html>
